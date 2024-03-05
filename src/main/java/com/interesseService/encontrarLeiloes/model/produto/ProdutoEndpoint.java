@@ -17,6 +17,9 @@ public class ProdutoEndpoint {
     @PostMapping
     @ResponseBody
     public void criar(@RequestBody ProdutoDTO produtoDTO) {
+        if (produtoDTO.getId() != null ){
+            throw new RuntimeException("Os dados não devem conter id!");
+        }
         produtoFacade.criar(produtoDTO);
     }
     @PutMapping("/{produtoId}")
