@@ -10,34 +10,30 @@ import java.util.stream.Collectors;
 public class ProdutoFacade {
     @Autowired
     public ProdutoRepository repository;
-    public ProdutoDTO criar(ProdutoDTO produtoDTO){
-        Produto produto = new Produto();
-       //roduto.setDescricao(produtoDTO.getDescricao());
-       //roduto.setTítulo(produtoDTO.getTitulo());
 
-       //rodutoDTO.setId(produto.getId());
-        return produtoDTO;
+    public Long criar(ProdutoDTO produtoDTO){
+        Produto produto = produtoDTO.toProduto();
+        repository.save(produto);
+        return produto.getId();
     }
-    public ProdutoDTO atualizar (ProdutoDTO produtoDTO, Long produtoId){
-        Produto produtoDatabase = repository.getOne(produtoId);
-       //rodutoDatabase.setTitulo(produtoDTO.getTitulo());
-       //rodutoDatabase.setDescricao(produtoDTO.getTitulo());
-        return produtoDTO;
+
+    public void atualizar (ProdutoDTO produtoDTO){
+
+        if (produtoDTO.getId() == null){
+            throw new RuntimeException("Id nulo!");
+        }
+        this.criar(produtoDTO);
     }
-    public ProdutoDTO converter (Produto produto){
-        ProdutoDTO result = new ProdutoDTO();
-      //result.setIdProduto(produto.getIdProduto());
-      //result.setDescricao(produto.getDescricao());
-        return result;
-    }
+
     public List<ProdutoDTO> getAll () {
         return repository
                 .findAll()
                 .stream()
-                .map(this::converter).collect(Collectors.toList());
+                .map(ProdutoDTO::new).collect(Collectors.toList());
     }
-    public String delete (Long produtoId){
+
+    public String excluir (Long produtoId){
         repository.deleteById(produtoId);
-        return "DELETED";
+        return null;
     }
 }
