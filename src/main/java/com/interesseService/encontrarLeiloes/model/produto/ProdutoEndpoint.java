@@ -2,7 +2,9 @@
 package com.interesseService.encontrarLeiloes.model.produto;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
         import java.awt.*;
@@ -16,11 +18,11 @@ public class ProdutoEndpoint {
 
     @PostMapping
     @ResponseBody
-    public void criar(@RequestBody ProdutoDTO produtoDTO) {
+    public ResponseEntity<Void> criar(@RequestBody ProdutoDTO produtoDTO) {
         if (produtoDTO.getId() != null ){
-            throw new RuntimeException("Os dados não devem conter id!");
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
-        produtoFacade.criar(produtoDTO);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
     @PutMapping("/{produtoId}")
     @ResponseBody

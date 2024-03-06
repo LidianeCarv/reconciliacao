@@ -32,8 +32,7 @@ public class ProdutoFacade {
                 .map(ProdutoDTO::new).collect(Collectors.toList());
     }
 
-    public String excluir (Long produtoId){
+    public void  excluir (Long produtoId){
         repository.deleteById(produtoId);
-        return null;
     }
 }
