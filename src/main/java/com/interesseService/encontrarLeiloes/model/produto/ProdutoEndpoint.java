@@ -7,14 +7,13 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-        import java.awt.*;
-        import java.util.List;
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "/produto", produces = MediaType.APPLICATION_JSON_VALUE)
 public class ProdutoEndpoint {
     @Autowired
-    private ProdutoFacade produtoFacade;
+    private ProdutoService produtoFacade;
 
     @PostMapping
     @ResponseBody
@@ -22,6 +21,7 @@ public class ProdutoEndpoint {
         if (produtoDTO.getId() != null ){
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
+        produtoFacade.criar(produtoDTO);
         return new ResponseEntity<>(HttpStatus.OK);
     }
     @PutMapping("/{produtoId}")

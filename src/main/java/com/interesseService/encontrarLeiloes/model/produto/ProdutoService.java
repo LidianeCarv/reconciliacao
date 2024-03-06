@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class ProdutoFacade {
+public class ProdutoService {
     @Autowired
     public ProdutoRepository repository;
 
@@ -18,9 +18,8 @@ public class ProdutoFacade {
     }
 
     public void atualizar (ProdutoDTO produtoDTO){
-
         if (produtoDTO.getId() == null){
-            throw new RuntimeException("Id nulo!");
+            throw new RuntimeException("Para atualizar é necessário passar o id do produto!");
         }
         this.criar(produtoDTO);
     }
@@ -34,5 +33,6 @@ public class ProdutoFacade {
 
     public void  excluir (Long produtoId){
         repository.deleteById(produtoId);
+        //return null;
     }
 }

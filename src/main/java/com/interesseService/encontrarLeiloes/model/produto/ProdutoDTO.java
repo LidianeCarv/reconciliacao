@@ -11,8 +11,6 @@ public class ProdutoDTO {
     private String descricao;
     private String link;
     private Float preco;
-
-
     public Produto toProduto(){
         Produto produto = new Produto();
         produto.setDescricao(this.getDescricao());
@@ -22,7 +20,6 @@ public class ProdutoDTO {
         produto.setPreco(this.getPreco());
         return produto;
     }
-
     public ProdutoDTO (Produto produto){
         this.id = produto.getId();
         this.titulo = produto.getTitulo();
