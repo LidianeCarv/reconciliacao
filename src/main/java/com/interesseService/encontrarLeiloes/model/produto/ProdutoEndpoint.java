@@ -13,7 +13,7 @@ import java.util.List;
 @RequestMapping(value = "/produto", produces = MediaType.APPLICATION_JSON_VALUE)
 public class ProdutoEndpoint {
     @Autowired
-    private ProdutoService produtoFacade;
+    private ProdutoService produtoService;
 
     @PostMapping
     @ResponseBody
@@ -21,7 +21,7 @@ public class ProdutoEndpoint {
         if (produtoDTO.getId() != null ){
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
-        produtoFacade.criar(produtoDTO);
+        produtoService.criar(produtoDTO);
         return new ResponseEntity<>(HttpStatus.OK);
     }
     @PutMapping("/{produtoId}")
@@ -29,18 +29,18 @@ public class ProdutoEndpoint {
     public void atualizar(@PathVariable("produtoId") Long produtoId,   //PUT
                                 @RequestBody ProdutoDTO produtoDTO) {
         produtoDTO.setId(produtoId);
-        produtoFacade.atualizar(produtoDTO);
+        produtoService.atualizar(produtoDTO);
     }
 
     @GetMapping
     @ResponseBody
     public List<ProdutoDTO> getAll() {
-        return produtoFacade.getAll();
+        return produtoService.getAll();
     }    //GET
 
     @DeleteMapping("/{produtoId}")
     @ResponseBody
     public void excluir(@PathVariable("produtoId") Long produtoId){
-        produtoFacade.excluir(produtoId);
+        produtoService.excluir(produtoId);
     }   //DELETE
 }
