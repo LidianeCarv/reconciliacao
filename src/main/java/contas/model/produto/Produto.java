@@ -1,4 +1,4 @@
-package com.interesseService.encontrarLeiloes.model.produto;
+package contas.model.produto;
 
 import jakarta.persistence.*;
 import lombok.Data;
