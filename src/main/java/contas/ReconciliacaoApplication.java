@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@EntityScan("com.lidiane.contas")
-@EnableJpaRepositories(basePackages = "com.lidiane.contas")
+@EntityScan("contas.model")
+@EnableJpaRepositories(basePackages = "contas.model")
 public class ReconciliacaoApplication {
 
 	public static void main(String[] args) {

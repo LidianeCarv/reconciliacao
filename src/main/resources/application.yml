@@ -6,7 +6,7 @@ spring:
     pool-name: plataforma-database-pool
     auto-commit: false
     connection-timeout: 30000
-  url: "jdbc:postgresql://0.0.0.0:5432/leiloes_spring_database"
+  url: "jdbc:postgresql://localhost:5432/postgres"
   username: postgres
   password: 2522
   type: com.zaxxer.hikari.HikariDataSource
