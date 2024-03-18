@@ -1,4 +1,4 @@
-package com.interesseService.encontrarLeiloes.model.produto;
+package contas.model.produto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

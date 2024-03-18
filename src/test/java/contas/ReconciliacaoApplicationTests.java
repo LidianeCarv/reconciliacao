@@ -1,10 +1,10 @@
-package com.interesseService.encontrarLeiloes;
+package contas;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class EncontrarLeiloesApplicationTests {
+class ReconciliacaoApplicationTests {
 
 	@Test
 	void contextLoads() {

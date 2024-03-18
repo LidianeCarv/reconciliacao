@@ -8,12 +8,12 @@
 		<version>3.2.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.interesseService</groupId>
-	<artifactId>encontrarLeiloes</artifactId>
+	<groupId>com.lidiane</groupId>
+	<artifactId>contas</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>encontrarLeiloes</name>
-	<description>Sistema de Leiloes</description>
+	<name>contas</name>
+	<description>Sistema de Reconciliacao</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>

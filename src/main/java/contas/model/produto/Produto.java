@@ -1,11 +1,11 @@
-package com.interesseService.encontrarLeiloes.model.produto;
+package contas.model.produto;
 
 import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
 @Entity
-@Table(name= "produto")
+@Table(name= "produto", schema = "reconciliacao")
 public class Produto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

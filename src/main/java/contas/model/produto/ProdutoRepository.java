@@ -1,4 +1,4 @@
-package com.interesseService.encontrarLeiloes.model.produto;
+package contas.model.produto;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

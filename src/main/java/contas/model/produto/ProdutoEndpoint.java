@@ -1,5 +1,5 @@
 
-package com.interesseService.encontrarLeiloes.model.produto;
+package contas.model.produto;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
