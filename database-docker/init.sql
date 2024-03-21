@@ -1,6 +1,6 @@
-CREATE DATABASE leiloes_spring_database;
+CREATE DATABASE postgres;
 
-CREATE TABLE public.produto (
+CREATE TABLE reconciliacao.produto (
 	id bigserial NOT NULL,
 	titulo varchar(200) NULL,
 	descricao varchar(500) NULL,
