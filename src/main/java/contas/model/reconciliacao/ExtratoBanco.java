@@ -5,6 +5,8 @@ import lombok.Data;
 
 import java.time.LocalDate;
 import java.util.Calendar;
+import java.util.List;
+
 @Data
 @Entity
 @Table(name = "extrato_banco", schema = "reconciliacao")

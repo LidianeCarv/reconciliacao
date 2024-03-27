@@ -15,7 +15,13 @@ public class Reconciliacao {
     private Long id;
     LocalDate data;
     private String notas;
+
+    @ManyToOne
     ExtratoBanco extratoBanco;
+
+    @ManyToOne
     MovimentacaoReserva movimentacaoReserva;
+
+    @ManyToOne
     MovimentacaoFinanceira movimentacaoFinanceira;
 }
