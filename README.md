@@ -1,14 +1,16 @@
-<h1># reconciliacao </h1>
 > Status: Em desenvolvimento ⚠️
 
-## O que é o Sistema Reconciliação?
-<p>É um sistema para realizar a reconciliacao de reservas
+## O que é o Sistema de Reconciliação?
+<p>É um sistema para realizar a reconciliação de reservas
 de casas alugadas pelo Airbnb, Booking e reservas por fora.
-Nele é possível fazer exportação de extrato do banco,de
+Nele é possível fazer exportação de extrato do banco, de
 histórico das plataformas de aluguel, além de lançamentos
-de reservas por fora, das despesas, das retiradas e recebimentos,
+de: reservas por fora, despesas, retiradas e recebimentos,
 vinculando esses registros com o extrato do banco, validando 
-assim todas as informações</p>
+assim, todas as informações.</p>
+
+## Diagrama de Classe
+![Captura de tela de 2024-03-27 19-28-14](https://github.com/LidianeCarv/reconciliacao/assets/112911249/548f360c-7129-42cd-9d98-72338065d37a)
 
 ## Tecnologias usadas:
 <Table>
@@ -21,7 +23,7 @@ assim todas as informações</p>
  <tr>
   <td>17.0.10 </td>
   <td>3.2.2</td>
-  <td>1.26.0</td>
+  <td>2.24.7</td>
   <td>16.2.0</td>
 </tr>
 </Table>
